@@ -1,0 +1,18 @@
+#AboutPage #content-container * {
+  display: table;
+  margin: 0 auto;
+}
+
+#AboutPage img {
+  width: 200px; 
+  height: 200px;
+  display: table;
+  margin: 0 auto;
+}
+
+#AboutPage .text-area {
+  width: 50%;
+  display: table;
+  margin: 0 auto;
+  text-align: justify;
+}

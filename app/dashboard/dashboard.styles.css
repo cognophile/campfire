@@ -1,0 +1,39 @@
+#DashboardPage p {
+    color: black; 
+}
+
+#DashboardPage .block {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+#DashboardPage #profile-link {
+    background-color: var(--secondary-theme-color);
+}
+
+#DashboardPage #profile-link:hover {
+    background-color: #fff;
+    color: var(--primary-theme-color);
+}
+
+#DashboardPage .action-card-container {
+    width: 100%; 
+    padding: 2.5% 2.5% 0% 2.5%;
+    display: table; 
+    margin: 0 auto;
+}
+
+#DashboardPage .card {
+    margin: 0 5px 10px 5px;
+}
+
+#DashboardPage i {
+    float: right;
+}

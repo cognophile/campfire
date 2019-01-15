@@ -1,0 +1,38 @@
+#login-header-container * {
+  display: table; 
+  margin: 0 auto;
+}
+
+#login-form {
+  width: 50%;
+  display: table; 
+  margin: 0 auto;
+}
+
+#login-input-username {
+  display: table; 
+  margin: 0 auto;
+} 
+
+#login-input-password {
+  display: table; 
+  margin: 0 auto;
+}
+
+#login-submit-button {
+  display: table; 
+  margin: 0 auto;
+}
+
+#login-register {
+  padding-top: 35px;
+  display: table;
+  margin: 0 auto;
+}
+
+#LoginPage img {
+  width: 200px; 
+  height: 200px;
+  display: table;
+  margin: 0 auto;
+}

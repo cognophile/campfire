@@ -1,0 +1,74 @@
+<div id="DashboardPage">
+  <a id="profile-link" href="#!/profile" type="button" class="block no-highlight">View Profile</a>
+  
+  <div class="page-container">
+    <h2>Greetings, {{ currentUser.firstname }}!</h2>
+    <p>This is the dashboard. Here, you can access all the awesome features we have to offer!</p>  
+    
+    <div class="action-card-container">
+      <div class="row container-row"> 
+
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Manage Blog
+                <i class="material-icons">subject</i>
+              </h5>
+              <p class="card-text">View your blog, posts, and comments</p>
+              <a href="#!/blog" class="btn btn-primary app-button">Go</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Manage Profile
+                <i class="material-icons">face</i>
+              </h5>
+              <p class="card-text">View and edit your account details</p>
+              <a href="#!/profile" class="btn btn-primary app-button">Go</a>
+            </div>
+          </div>
+        </div> 
+         
+      </div>
+      
+      <div class="row container-row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Manage Preferences
+                <i class="material-icons">settings</i>
+              </h5>
+
+              <p class="card-text">View and edit your preferences</p>
+              <a href="#!/preferences" class="btn btn-primary app-button">Go</a>
+            </div>
+          </div>
+        </div>  
+
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Search Blogs
+                <i class="material-icons">search</i>
+              </h5>
+
+              <p class="card-text">Search users and view their blogs</p>
+              <a href="#!/public" class="btn btn-primary app-button">Go</a>
+            </div>
+          </div>
+        </div>  
+
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  

@@ -1,0 +1,23 @@
+<div id="PreferencesPage">
+  <div class="page-container">
+    <div class="preferences-container">
+      
+      <div class="card text-center">
+        <h5 class="card-header">
+          Theme
+        </h5>
+        <div class="card-body">
+          <h5 class="card-title">For a fresh lick of paint</h5>
+          <p class="card-text">Primary | Secondary | Menu Text | Background</p>
+          <div id="preferences-theme-primary" class="preferences-theme-box" ng-click="EditThemePrimary()"></div>
+          <div id="preferences-theme-secondary" class="preferences-theme-box" ng-click="EditThemeSecondary()"></div>
+          <div id="preferences-theme-text" class="preferences-theme-box" ng-click="EditThemeText()"></div>
+          <div id="preferences-theme-background" class="preferences-theme-box" ng-click="EditThemeBackground()"></div>
+        </div>
+        <div class="card-footer text-muted">
+          {{ currentUser.username }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

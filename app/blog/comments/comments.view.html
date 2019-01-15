@@ -1,0 +1,51 @@
+<div id="CommentsPage"> 
+    <div class="page-header">
+      <h3>Comments</h3>
+    </div>
+
+    <form name="commentsForm" ng-submit="commentsForm.$valid && AddComment(commentBody)" novalidate>
+        
+        <div class="input-group mb-3 mr-sm-2">
+          <div id="message-area">
+            <flash-message duration="4000" show-close="true"></flash-message>
+          </div> 
+  
+          <textarea id="comment-input" class="form-control" name="commentBody" ng-maxlength="256" ng-model="commentBody" 
+            rows="3" placeholder="Say something...">
+          </textarea>
+          <div class="input-group-append">
+            <button type="submit" class="input-group-text material-icons pointer btn btn-primary app-button" ng-disabled="commentsForm.$invalid">add</button>
+          </div>
+        </div> 
+      </form>
+
+      <div id="comments-display" class="container-fluid">
+        <div ng-repeat="comment in post.comments | orderBy:'-score'">
+          <div class="row">
+            <div class="col-2">
+              <div class="vote-area input-group-prepend">
+                <button ng-click="Upvote(comment)" class="input-group-text material-icons pointer btn btn-primary app-button" ng-disabled="commentsForm.$invalid">expand_less</button>
+                <p class="vote-score"> {{ comment.score }} </p>
+                <button ng-click="Downvote(comment)" class="input-group-text material-icons pointer btn btn-primary app-button" ng-disabled="commentsForm.$invalid">expand_more</button>
+              </div>
+            </div>
+
+            <div class="col-10">
+              <div class="card comment">
+                <div class="card-header">
+                  <small>{{ comment.author }} | {{ comment.created | date : "short" }}</small>
+                  <button id="delete-comment-btn" class="btn btn-primary app-button" ng-click="DeleteComment(comment)" ng-if="comment.author === currentUser.username || post.author === currentUser.username">
+                    <i class="material-icons">delete</i>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <small class="card-title">{{ comment.body }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>

@@ -1,0 +1,80 @@
+<div id="EditPostPage">
+    
+    <div class="page-header">
+        <button id="post-list-btn" class="btn btn-primary app-button" type="button" ng-click="LoadPostList();">Back</button>
+
+        <small id="post-author">Last updated {{ post.updated | date : "short" }}</small>
+    </div> 
+
+    <div class="page-container">
+      <flash-message duration="4000" show-close="true"></flash-message> 
+
+      <form ng-submit="editForm.$valid && EditPost()" name="editForm" novalidate>
+            <div class="form-group row">
+                <label for="post-title" class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" 
+                        class="form-control" id="post-title" 
+                        ng-model="post.title"
+                        name="postTitle"
+                        required>
+                </div>
+                <br><br>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10" ng-messages="editForm.postTitle.$touched && editForm.postTitle.$error" role="alert">
+                    <div ng-message="required" class="alert alert-danger">A title is required!</div>
+                    <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="post-body">Body</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="post-body"
+                        rows="25" name="postBody"
+                        ng-model="post.body"
+                        required></textarea>
+                </div>
+                <br><br>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10" ng-messages="editForm.postBody.$touched && editForm.postBody.$error" role="alert">
+                    <div ng-message="required" class="alert alert-danger">Some content is required!</div>
+                    <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="post-tags" class="col-sm-2 col-form-label">Tags</label>
+                <div class="col-sm-10">
+                    <input type="text" 
+                        class="form-control" id="post-title" 
+                        placeholder="food, art, story..."
+                        value="{{post.tags}}"
+                        ng-model="post.tags"
+                        name="postTags"
+                        required>
+                </div>
+                <br><br>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10" ng-messages="postForm.postTags.$touched && postForm.postTags.$error" role="alert">
+                    <div ng-message="required" class="alert alert-danger">Some tags are required!</div>
+                    <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="col-sm-2 form-check-label" for="post-publish">Publish</label>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" 
+                        type="checkbox" id="post-publish"
+                        ng-model="post.published"
+                        name="postPublished">
+                    </div>
+                </div>
+            </div>
+        
+            <input id="save-post-edit-btn" type="submit" value="Save" class="btn btn-primary app-button" ng-disabled="editForm.$invalid">
+        </form>
+    </div>
+</div>

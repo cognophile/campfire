@@ -1,0 +1,85 @@
+<div id="SearchBlogPage" ng-controller="BlogSearchController">
+    
+    <div class="page-header"></div>
+
+    <div class="page-container">
+      <div ng-if="subpage === 'search'">
+        <h2>Search for a blog</h2>
+        <p>To view a blog, search by their username or tags in the provided boxes below.</p>
+
+        <form name="searchByUserForm" class="form-inline" ng-submit="searchByUserForm.$valid && SearchByUser(username)" novalidate>
+
+          <div id="search-username-input" class="input-group mb-3 mr-sm-2">
+            <input type="text" class="form-control" name="username" required ng-minlength="3" ng-maxlength="16" ng-model="username" placeholder="Username...">
+            <div class="input-group-append">
+              <button type="submit" class="input-group-text material-icons pointer app-button">search</button>
+            </div>
+          </div> 
+            
+        </form>
+
+        <form name="searchByTagForm" class="form-inline" ng-submit="searchByTagForm.$valid && SearchByTag(tag)" novalidate>
+
+          <div id="search-tag-input" class="input-group mb-3 mr-sm-2">
+            <input type="text" class="form-control" name="tag" required ng-minlength="3" ng-maxlength="16" ng-model="tag" placeholder="Tag...">
+            <div class="input-group-append">
+              <button type="submit" class="input-group-text material-icons pointer app-button">search</button>
+            </div>
+          </div> 
+            
+        </form>
+        
+        <flash-message duration="4000" show-close="true"></flash-message>
+        
+        <hr>
+        <div ng-repeat="post in taggedPosts">
+          <div class="card pointer" ng-click="ViewPost(post)">
+            <h5 class="card-header">{{ post.title }}</h5>
+            <div class="card-body">
+              <h5 class="card-title">{{ post.body | limitTo: 32 }}{{ post.body.length > 20 ? '&hellip; Read more' : ''}}</h5>
+              <p class="card-text">{{ post.created | date : "short" }}</p>
+            </div>
+          </div>
+        </div>
+
+      </div> 
+
+      <div ng-if="subpage === 'view'">
+        <div ng-if="blog.posts.length">
+          <div class="page-header">
+            <button id="back-btn" class="btn btn-primary app-button" type="button" ng-click="GoBack()">Back</button>
+            <h2 class="subpage-title">Welcome, to {{ blog.author }}'s Blog</h2>
+          </div>
+          <br>
+          
+          <div ng-repeat="post in blog.posts">
+            <div ng-if="post.published">
+              <div class="card pointer" ng-click="ViewPost(post)">
+                <h5 class="card-header">{{ post.title }}</h5>
+                <div class="card-body">
+                  <h5 class="card-title">{{ post.body | limitTo: 32 }}{{ post.body.length > 20 ? '&hellip; Read more' : ''}}</h5>
+                  <p class="card-text">{{ post.created | date : "short" }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-if="!blog.posts || !blog.posts.length">
+          <div class="page-header">
+            <button id="back-btn" class="btn btn-primary app-button" type="button" ng-click="GoBack()">Back</button>
+            
+            <h3 class="subpage-title"><strong>Oops!</strong> We couldn't find a blog for that user. Try again.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div ng-if="subpage === 'read'">
+        <view-post post="selectedPost"></view-post>
+      </div>
+
+      <div ng-if="subpage === 'tags'">
+        
+      </div>
+    </div>
+</div>

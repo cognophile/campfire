@@ -1,0 +1,15 @@
+#CreatePostPage .page-header > * {
+    display: inline-block;
+}
+
+#CreatePostPage .page-header > #post-list-btn {
+    float: right; 
+}
+
+#CreatePostPage #post-body {
+    margin-bottom: 10px;
+}
+
+#CreatePostPage #save-post-btn {
+    margin-top: 10px;
+}

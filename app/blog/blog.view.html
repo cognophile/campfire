@@ -1,0 +1,79 @@
+<div id="BlogPage" ng-controller="BlogController">
+   <div class="page-container"> 
+    
+    <div ng-if="subpage === 'list'">
+      <div class="page-header">
+        <h3>Your posts</h3>
+        <button id="create-post-btn" class="btn btn-primary app-button" type="button" ng-click="SetSubpage('create');">Write</button>
+      </div>
+
+      <div ng-if="!userPosts">You've not written any posts yet! Write one!</div>
+
+      <!-- TODO: ADD FILTER SEARCH HERE --> 
+      <div id="post-list" class="list-group">
+        <h4>Published</h4>
+        <div ng-repeat="post in userPosts | orderBy:'+id'">
+          <div ng-if="post.published">
+
+            <div class="post pointer">
+              <div class="list-group-item list-group-item-action flex-column align-items-start inner-post">
+
+                <div id="edit-click-area" ng-click="EditPost(post)">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="mb-1">{{ post.title }}</h5>
+                      <small>{{ post.published ? 'Published' : 'Unpublished' }} | {{ post.statistics.views }} {{ post.statistics.views === 1 ? 'View' : 'Views' }} </small>
+                  </div>
+                  
+                  <p class="mb-1">{{ post.body | limitTo: 32 }}{{ post.body.length > 20 ? '&hellip; Read more' : ''}}</p>
+                  <small>Created {{ post.created | date : "short" }} by {{ post.author }}</small>
+                </div>
+
+                <button id="delete-post-btn" style="float: right;" class="btn btn-primary app-button" ng-click="DeletePost(post)">
+                    <i class="material-icons">delete</i>
+                </button>
+              </div>
+            </div> 
+          </div>
+        </div>       
+      </div>
+
+      <div id="post-list" class="list-group">
+        <h4>Drafts</h4>
+        <div ng-repeat="post in userPosts | orderBy:'+id'">
+          <div ng-if="!post.published">
+
+            <div class="post pointer">
+              <div class="list-group-item list-group-item-action flex-column align-items-start inner-post">
+                
+                <div id="edit-click-area" ng-click="EditPost(post)">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="mb-1">{{ post.title }}</h5>
+                    <small>{{ post.published ? 'Published' : 'Unpublished' }}</small>
+                  </div>
+                  
+                  <p class="mb-1">{{ post.body | limitTo: 32 }}{{ post.body.length > 20 ? '&hellip; Read more' : ''}}</p>
+
+                  <small>Created {{ post.created | date : "short" }} by {{ post.author }}</small>
+                </div>
+
+                <button id="delete-post-btn" style="float: right;" class="btn btn-primary app-button" ng-click="DeletePost(post)">
+                    <i class="material-icons">delete</i>
+                </button>
+
+              </div>
+            </div> 
+          </div>
+        </div>       
+      </div>
+    </div>
+    
+  <div ng-if="subpage === 'create'">
+    <create-post user="currentUser" posts="allPosts"></create-post>
+  </div>
+
+  <div ng-if="subpage === 'edit'">
+    <edit-post post="currentPost" posts="allPosts" user="currentUser"></edit-post>
+  </div>
+
+  </div>
+</div>

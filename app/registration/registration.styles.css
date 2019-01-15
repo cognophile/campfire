@@ -1,0 +1,33 @@
+#reg-header-container * {
+  display: table; 
+  margin: 0 auto;
+}
+
+#reg-form {
+  width: 50%; 
+  display: table; 
+  margin: 0 auto;
+}
+
+#RegistrationPage #reg-submit-btn {
+  display: table; 
+  margin: 0 auto;
+}
+
+.reg-input {
+  display: table; 
+  margin: 0 auto;
+}
+
+.reg-submit {
+  display: table; 
+  margin: 0 auto;
+}
+
+#RegistrationPage img {
+  width: 200px; 
+  height: 200px; 
+  display: table;
+  margin: 0 auto;
+}
+

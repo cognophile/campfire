@@ -1,0 +1,34 @@
+#SearchBlogPage .post {
+    margin: 10px;
+}
+
+#SearchBlogPage .page-header > * {
+    display: inline-block;
+} 
+ 
+#SearchBlogPage .page-header > #back-btn {
+    float: right;
+    margin-left: 5px;
+}
+
+#SearchBlogPage .subpage-title {
+    display: block;
+    width: 80%;
+}
+
+#SearchBlogPage #search-username-input, #search-tag-input {
+    width: 100%;
+}
+
+#SearchBlogPage #message-area {
+    width: 90%;
+}
+
+#SearchBlogPage .card {
+    margin-bottom: 10px;
+}
+
+#SearchBlogPage #blog-link {
+    color: #856404;
+    text-decoration: underline;
+}

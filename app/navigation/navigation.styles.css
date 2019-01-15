@@ -1,0 +1,26 @@
+#NavigationPart {
+    width: 100%;
+}
+
+#navbar-area {
+    width: 100%;
+    background-color: var(--primary-theme-color);
+}
+
+#navbar-area > * {
+    color: var(--text-theme-color);
+}
+
+#navbar-area li > * {
+    color: var(--text-theme-color);
+    height: 100%;
+}
+
+#navbar-area li a:hover { 
+    background-color: #FFFFFF;
+    color: var(--primary-theme-color);
+}
+
+.active {
+    background-color: var(--secondary-theme-color);
+}

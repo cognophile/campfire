@@ -1,0 +1,30 @@
+
+#CommentsPage #comment-input {
+  width: 90%;
+  resize: none;
+}
+ 
+#CommentsPage .pointer {
+  cursor: pointer;
+}
+
+#CommentsPage #message-area {
+  width: 100%;
+}
+
+#CommentsPage .comment {
+  margin-bottom: 10px;
+}
+
+#CommentsPage .vote-area {
+  display: block;
+}
+
+#CommentsPage .vote-score {
+  font-size: 1.25em;
+  margin: 5px 0 5px 18px;
+}
+
+#CommentsPage #delete-comment-btn {
+  float: right;
+}

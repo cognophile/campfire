@@ -1,0 +1,17 @@
+<div id="ViewPostPage"> 
+    
+    <div class="page-header">
+        <h1>{{ post.title }}</h1>
+        <button id="back-btn" class="btn btn-primary app-button" type="button" ng-click="GoBack()">Back</button>
+
+        <small id="post-author">{{ post.author }} | created {{ post.created | date : "short" }} | last updated {{ post.updated | date : "short" }}</small>
+    </div>
+
+    <div class="page-container">
+      <div>{{ post.body }}</div>
+      <hr>
+      <post-tags post="post"></post-tags>
+      <hr>
+      <post-comments post="post"></post-comments>
+    </div>
+</div>

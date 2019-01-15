@@ -1,0 +1,28 @@
+#PreferencesPage .preferences-theme-box {
+    width: 50px;
+    height: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#PreferencesPage #preferences-theme-primary {
+    background: var(--primary-theme-color);
+}
+
+#PreferencesPage #preferences-theme-secondary {
+    background: var(--secondary-theme-color);
+}
+
+#PreferencesPage #preferences-theme-text {
+    background: var(--text-theme-color);
+}
+
+#PreferencesPage #preferences-theme-background {
+    background: var(--background-theme-color);
+}
+
+#PreferencesPage #preferences-theme-save {
+    background: var(--primary-theme-color);
+    color: #fff; 
+}

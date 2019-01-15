@@ -1,0 +1,84 @@
+<div id="RegistrationPage">
+    <br>
+
+    <img src="https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Campfire-Vector-PNG-Transparent-Image.png" 
+        alt="Campfire Logo"> 
+
+    <div id="reg-header-container">
+        <h1>
+            Campfire
+        </h1>  
+        <h3>
+            Please register below
+        </h3>
+    </div>
+    <br><br>
+
+    <form id="reg-form" ng-submit="registration.$valid && Register()" name="registration" novalidate>
+        <input type="text" ng-model="username" class="form-control" name="username" required
+          ng-minlength="3" ng-maxlength="16" placeholder="Username">
+        <br>
+        <div ng-messages="registration.username.$error" ng-if='registration.username.$touched' role="alert">
+          <div ng-message="required" class="alert alert-danger">Username required</div>
+          <div ng-message="minlength" class="alert alert-danger">Username must be between 3-16 characters</div>
+          <div ng-message="maxlength" class="alert alert-danger">Username must be between 3-16 characters</div>
+          <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+        </div>
+        <br>
+        
+        <input type="text" ng-model="firstname" class="form-control" name="firstname" required
+            ng-maxlength="32" placeholder="Firstname">
+        <br> 
+        <div ng-messages="registration.firstname.$error" ng-if='registration.firstname.$touched' role="alert">
+          <div ng-message="required" class="alert alert-danger">Firstname required</div>
+          <div ng-message="maxlength" class="alert alert-danger">Firstname must be less-than 32 characters</div>
+          <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+        </div>
+        <br>
+        
+        <input type="text" ng-model="surname" class="form-control" name="surname" required
+            ng-maxlength="32" placeholder="Surname">
+        <br>
+        <div ng-messages="registration.surname.$error" ng-if='registration.surname.$touched' role="alert">
+          <div ng-message="required" class="alert alert-danger">Surname required</div>
+          <div ng-message="maxlength" class="alert alert-danger">Surname must be less-than 32 characters</div>
+          <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+        </div>
+        <br>
+
+        <input type="text" ng-model="address" class="form-control" name="address" required
+          ng-minlength="8" ng-maxlength="64" placeholder="Full address">
+        <br>
+        <div ng-messages="registration.address.$error" ng-if='registration.address.$touched' role="alert">
+          <div ng-message="required" class="alert alert-danger">Full address required</div>
+          <div ng-message="minlength" class="alert alert-danger">Address must be between 8-64 characters</div>
+          <div ng-message="maxlength" class="alert alert-danger">Address must be between 8-64 characters</div>
+          <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+        </div>
+        <br>
+        
+        <input type="password" ng-model="password" class="form-control" name="password" required
+          ng-minlength="12" ng-maxlength="32" placeholder="Password">
+        <br>
+        <div ng-messages="registration.password.$error" ng-if='registration.password.$touched' role="alert">
+          <div ng-message="required" class="alert alert-danger">Password required</div>
+          <div ng-message="minlength" class="alert alert-danger">Password must be between 12-32 characters</div>
+          <div ng-message="maxlength" class="alert alert-danger">Password must be between 12-32 characters</div>
+          <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+        </div>
+        <br>
+        
+        <input type="password" ng-model="passwordConfirm" class="form-control" name="passwordConfirm" required
+          ng-minlength="12" ng-maxlength="32" placeholder="Confirm password">
+        <br>
+        <div ng-messages="registration.passwordConfirm.$error" ng-if='registration.passwordConfirm.$touched' role="alert">
+          <div ng-message="required" class="alert alert-danger">Password confirmation required</div>
+          <div ng-message="minlength" class="alert alert-danger">Password must be between 12-32 characters</div>
+          <div ng-message="maxlength" class="alert alert-danger">Password must be between 12-32 characters</div>
+          <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+        </div>
+        <br><br>
+        
+        <input id="reg-submit-btn" class="app-button btn btn-primary" type="submit" value="Register!" ng-disabled="registration.$invalid">
+    </form>
+</div>

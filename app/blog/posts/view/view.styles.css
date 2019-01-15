@@ -1,0 +1,12 @@
+#ViewPostPage .page-header > * {
+    display: inline-block;
+}
+
+#ViewPostPage .page-header > #back-btn {
+    float: right;
+    margin-left: 5px; 
+}
+
+#ViewPostPage #post-author {
+    display: block;
+}

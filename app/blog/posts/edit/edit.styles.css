@@ -1,0 +1,16 @@
+#EditPostPage .page-header > * {
+    display: inline-block;
+}
+
+#EditPostPage .page-header > #post-list-btn {
+    float: right;
+    margin-left: 5px; 
+}
+
+#EditPostPage #post-author {
+    display: block;
+}
+
+#EditPostPage #save-post-edit-btn {
+    margin-top: 10px;
+}

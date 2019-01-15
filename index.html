@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html ng-app="CampfireApp"> 
+  <head>
+     
+    <title>CampfireApp</title>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Third Party Libraries and Tools -->
+    <!-- AngularJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-messages.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-animate.min.js"></script>
+
+ 
+    <!-- Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    <!-- Third Party CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+  
+    <!-- Custom CSS -->
+    <link href="app/styles.css" rel="stylesheet">
+  </head>
+
+  <body class="animated fadeIn delay-1s">
+    <div class="app-content">
+      <div class="dont-animate" ng-include="'app/navigation/navigation.view.html'"></div>
+      <div ng-view class="main-content">
+        <div class="text-center">
+          <i class="fa fa-spin fa-spinner"></i>Loading...</div>
+      </div>
+    </div>
+    
+    <!-- Models --> 
+    <script src="app/models/user.model.js"></script>
+    <script src="app/models/blog.model.js"></script>
+    <script src="app/models/post.model.js"></script>
+    <script src="app/models/comment.model.js"></script>
+
+    <!-- Config -->
+    <script src="app/app.bootstrap.js"></script>
+    <script src="app/routes.config.js"></script>
+    <script src="app/authentication.config.js"></script>
+
+    <!-- Helpers -->
+    <script src="helpers/popups.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/authentication.service.js"></script>
+    <script src="app/services/blog.service.js"></script>
+    <script src="app/services/factories/user.factory.service.js"></script>
+    <script src="app/services/factories/blog.post.factory.service.js"></script>
+    <script src="app/services/factories/blog.post.comment.factory.service.js"></script>
+
+    <!-- Directives --> 
+    <script src="app/blog/posts/create/create.directive.js"></script>
+    <script src="app/blog/posts/edit/edit.directive.js"></script>
+    <script src="app/blog/posts/view/view.directive.js"></script>
+    <script src="app/blog/comments/comments.directive.js"></script>
+    <script src="app/blog/tags/tags.directive.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/login/login.controller.js"></script>
+    <script src="app/logout/logout.controller.js"></script>
+    <script src="app/navigation/navigation.controller.js"></script>
+    <script src="app/about/about.controller.js"></script>
+    <script src="app/dashboard/dashboard.controller.js"></script>
+    <script src="app/registration/registration.controller.js"></script>
+    <script src="app/user-profile/user-profile.controller.js"></script>
+    <script src="app/preferences/preferences.controller.js"></script>
+    <script src="app/blog/blog.controller.js"></script>
+    <script src="app/blog/search/search.controller.js"></script>
+
+    <!-- Plugins -->
+    <script src="plugins/ngFlash/angular-flash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+  </body>
+
+  <footer>
+    <p>Copyright &copy; cognophile 2018</p>
+  </footer>
+</html>

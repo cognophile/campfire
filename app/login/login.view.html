@@ -1,0 +1,42 @@
+<div id="LoginPage">
+    <br>
+    
+    <img src="https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Campfire-Vector-PNG-Transparent-Image.png" 
+        alt="Campfire Logo"> 
+
+    <div id="login-header-container">
+        <h1>
+            Campfire
+        </h1>  
+        <h3>
+            Please login below
+        </h3>
+    </div>
+
+    <br><br> 
+
+    <form id="login-form" ng-submit="login.$valid && RequestLogin()" name="login" novalidate>
+        <input id="login-input-username" class="form-control" name="username" required ng-minlength="3" ng-maxlength="16" ng-model="username" placeholder="Username">
+        
+        <br>
+        <div ng-messages="login.username.$error" ng-if='login.username.$touched' role="alert">
+          <div ng-message="required" class="alert alert-danger">Username required</div>
+          <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+        </div>
+        <br>
+        
+        <input id="login-input-password" class="form-control" name="password" required
+          ng-minlength="3" ng-maxlength="16" type="password" ng-model="password" placeholder="Password">
+        
+        <br>
+        <div ng-messages="login.password.$error" ng-if='login.password.$touched' role="alert">
+          <div ng-message="required" class="alert alert-danger">Password required</div>
+          <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+        </div>
+        <br>
+       
+        <input id="login-submit-button" value="Login!" type="submit" class="btn btn-primary app-button" ng-disabled="login.$invalid">
+    </form>
+
+    <p id="login-register">Don't have an account? <a href="#!/register">Register now!</a><p>
+</div>

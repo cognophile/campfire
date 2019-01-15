@@ -1,0 +1,28 @@
+#BlogPage .post {
+    margin: 5px;
+} 
+
+#BlogPage .inner-post {
+    height: 150px;
+} 
+
+#BlogPage .page-header {
+    margin: 10px;
+}
+
+#BlogPage .page-header > * {
+    display: inline-block;
+}
+
+#BlogPage #create-post-btn {
+    float: right;
+    margin-left: 5px;
+}
+
+#BlogPage #post-list {
+    margin: 10px 10px 25px 10px;
+}
+
+#BlogPage .pointer {
+  cursor: pointer;
+}

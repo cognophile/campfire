@@ -1,0 +1,80 @@
+<div id="UserProfilePage">
+    <a id="profile-edit-user" ng-click="ToggleEditForm()" type="button" class="block no-highlight">Edit Account</a>
+  <br>
+
+  <div class="page-container container"> 
+    <flash-message duration="4000" show-close="true"></flash-message>
+    
+    <div id="profile-section row">
+      
+      <div id="profile-right" class="col-md-6">
+        <img id="profile-image" alt="Profile image" 
+          ng-click="EditProfileImage()" ng-src="{{ currentUser.profileImage }}">
+        
+        <button id="profile-image-btn" class="btn btn-primary app-button"
+        ng-click="EditProfileImage()">Update</button>
+      </div>
+
+      <div id="profile-left" class="col-md-6">
+          <h1>Username: {{ currentUser.username }}</h1>
+          <h3>Full name: {{ currentUser.firstname + " " + currentUser.surname }}</h3>
+          <p>Member since: {{ currentUser.updated | date:'yyyy-MM-dd' }}</p>
+          <p>Registered Address: {{ currentUser.address }}</p>
+                
+          <div id="user-edit-section">
+            <h3 id="user-edit-header">
+                Edit Account: 
+            </h3>
+            <form id="user-edit-form" ng-submit="editForm.$valid && EditUser()" name="editForm">
+                <input type="text" ng-model="newUsername" class="form-control" name="newUsername" required ng-minlength="3" ng-maxlength="16" placeholder="Username">
+                <br>
+                <div ng-messages="editForm.newUsername.$touched && editForm.newUsername.$error" role="alert">
+                    <div ng-message="required" class="alert alert-danger">Confirm/change username to save!</div>
+                    <div ng-message="minlength" class="alert alert-danger">Username must be between 3-16 characters</div>
+                    <div ng-message="maxlength" class="alert alert-danger">Username must be between 3-16 characters</div>
+                    <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+                </div>
+                
+                <input type="text" ng-model="newFirstname" class="form-control" name="newFirstname" required ng-maxlength="32" placeholder="Firstname">
+                <br>
+                <div ng-messages="editForm.newFirstname.$touched && editForm.newFirstname.$error" role="alert">
+                    <div ng-message="required" class="alert alert-danger">Confirm/change first name to save!</div>
+                    <div ng-message="maxlength" class="alert alert-danger">Firstname must be less-than 32 characters</div>
+                    <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+                </div>
+                
+                <input type="text" ng-model="newSurname" class="form-control" name="newSurname" required ng-maxlength="32" placeholder="Surname">
+                <br>
+                <div ng-messages="editForm.newSurname.$touched && editForm.newSurname.$error" role="alert">
+                    <div ng-message="required" class="alert alert-danger">Confirm/change surname to save!</div>
+                    <div ng-message="maxlength" class="alert alert-danger">Surname must be less-than 32 characters</div>
+                    <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+                </div>
+
+                <input type="text" ng-model="newAddress" class="form-control" name="newAddress" required
+                  ng-minlength="8" ng-maxlength="64" placeholder="Full address">
+                <br>
+                <div ng-messages="editForm.newAddress.$touched && editForm.newAddress.$error" role="alert">
+                    <div ng-message="required" class="alert alert-danger">Confirm/change address to save!</div>
+                    <div ng-message="minlength" class="alert alert-danger">Address must be between 8-64 characters</div>
+                    <div ng-message="maxlength" class="alert alert-danger">Address must be between 8-64 characters</div>
+                    <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+                </div>
+                
+                <input type="password" ng-model="newPassword" class="form-control" name="newPassword" required
+                  ng-minlength="12" ng-maxlength=32 placeholder="Password">
+                <br>
+                <div ng-messages="editForm.newPassword.$touched && editForm.newPassword.$error" role="alert">
+                  <div ng-message="required" class="alert alert-danger">Confirm/change password to save!</div>
+                  <div ng-message="minlength" class="alert alert-danger">Password must be between 12-32 characters</div>
+                  <div ng-message="maxlength" class="alert alert-danger">Password must be between 12-32 characters</div>
+                  <div ng-message-default class="alert alert-danger">Hmm, something looks wrong!</div>
+                </div>
+                
+                <input class="btn btn-primary app-button" type="submit" value="Save" ng-disabled="editForm.$invalid">
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div> 
