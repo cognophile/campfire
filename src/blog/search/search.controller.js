@@ -1,4 +1,4 @@
-app.controller('BlogSearchController', ["$scope", "AuthService", '$location', "BlogPostFactoryService", 'Flash', "BlogService",
+app.controller('BlogSearchController', ["$scope", "AuthService", '$location', "PostFactoryService", 'Flash', "BlogService",
         function ($scope, authService, $location, postFactoryService, Flash, blogService) 
         {
           $scope.currentUser = authService.currentUser;

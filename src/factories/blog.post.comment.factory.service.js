@@ -1,4 +1,4 @@
-app.service('PostCommentFactoryService', ['$rootScope',
+app.service('CommentFactoryService', ['$rootScope',
     function($rootScope) 
     {
       /**

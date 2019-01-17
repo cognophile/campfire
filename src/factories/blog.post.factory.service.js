@@ -1,4 +1,4 @@
-app.service('BlogPostFactoryService', ['$rootScope',
+app.service('PostFactoryService', ['$rootScope',
     function($rootScope) 
     {
       /**

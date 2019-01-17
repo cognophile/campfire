@@ -33,7 +33,7 @@
 
   
     <!-- Custom CSS -->
-    <link href="app/styles.css" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
   </head>
 
   <body class="animated fadeIn delay-1s">
@@ -45,49 +45,51 @@
       </div>
     </div>
     
-    <!-- Models --> 
-    <script src="app/models/user.model.js"></script>
-    <script src="app/models/blog.model.js"></script>
-    <script src="app/models/post.model.js"></script>
-    <script src="app/models/comment.model.js"></script>
-
     <!-- Config -->
-    <script src="app/app.bootstrap.js"></script>
-    <script src="app/routes.config.js"></script>
-    <script src="app/authentication.config.js"></script>
+    <script src="config/app.bootstrap.js"></script>
+    <script src="config/routes.config.js"></script>
+    <script src="config/authentication.config.js"></script>
 
     <!-- Helpers -->
     <script src="helpers/popups.js"></script>
 
-    <!-- Services -->
-    <script src="app/services/authentication.service.js"></script>
-    <script src="app/services/blog.service.js"></script>
-    <script src="app/services/factories/user.factory.service.js"></script>
-    <script src="app/services/factories/blog.post.factory.service.js"></script>
-    <script src="app/services/factories/blog.post.comment.factory.service.js"></script>
-
-    <!-- Directives --> 
-    <script src="app/blog/posts/create/create.directive.js"></script>
-    <script src="app/blog/posts/edit/edit.directive.js"></script>
-    <script src="app/blog/posts/view/view.directive.js"></script>
-    <script src="app/blog/comments/comments.directive.js"></script>
-    <script src="app/blog/tags/tags.directive.js"></script>
-
-    <!-- Controllers -->
-    <script src="app/login/login.controller.js"></script>
-    <script src="app/logout/logout.controller.js"></script>
-    <script src="app/navigation/navigation.controller.js"></script>
-    <script src="app/about/about.controller.js"></script>
-    <script src="app/dashboard/dashboard.controller.js"></script>
-    <script src="app/registration/registration.controller.js"></script>
-    <script src="app/user-profile/user-profile.controller.js"></script>
-    <script src="app/preferences/preferences.controller.js"></script>
-    <script src="app/blog/blog.controller.js"></script>
-    <script src="app/blog/search/search.controller.js"></script>
-
     <!-- Plugins -->
     <script src="plugins/ngFlash/angular-flash.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+    <!-- Models --> 
+    <script src="src/models/user.model.js"></script>
+    <script src="src/models/blog.model.js"></script>
+    <script src="src/models/post.model.js"></script>
+    <script src="src/models/comment.model.js"></script>
+
+    <!-- Services -->
+    <script src="src/services/authentication.service.js"></script>
+    <script src="src/services/blog.service.js"></script>
+
+    <!-- Factories -->
+    <script src="src/factories/user.factory.service.js"></script>
+    <script src="src/factories/post.factory.service.js"></script>
+    <script src="src/factories/comment.factory.service.js"></script>
+
+    <!-- Directives --> 
+    <script src="src/blog/posts/create/create.directive.js"></script>
+    <script src="src/blog/posts/edit/edit.directive.js"></script>
+    <script src="src/blog/posts/view/view.directive.js"></script>
+    <script src="src/blog/comments/comments.directive.js"></script>
+    <script src="src/blog/tags/tags.directive.js"></script>
+
+    <!-- Controllers -->
+    <script src="src/login/login.controller.js"></script>
+    <script src="src/logout/logout.controller.js"></script>
+    <script src="src/navigation/navigation.controller.js"></script>
+    <script src="src/about/about.controller.js"></script>
+    <script src="src/dashboard/dashboard.controller.js"></script>
+    <script src="src/registration/registration.controller.js"></script>
+    <script src="src/user-profile/user-profile.controller.js"></script>
+    <script src="src/preferences/preferences.controller.js"></script>
+    <script src="src/blog/blog.controller.js"></script>
+    <script src="src/blog/search/search.controller.js"></script>
 
   </body>
 
