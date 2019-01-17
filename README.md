@@ -2,7 +2,7 @@
 A web-based AngularJS explorative blogging application.   
 
 ## Demonstration Application
-Plunkr: [External link](https://embed.plnkr.co/plunk/OA8ZyshInUXJWEGg)
+Plunkr: [External link](https://embed.plnkr.co/plunk/KisvRddCNIHBW7pY)
 
 ## Logging in
 A provisioned user is provided for quick access and testing. 
