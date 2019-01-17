@@ -5,13 +5,13 @@ app.config (
 		{
 		    $routeProvider.when (
 					'/dashboard', {
-						templateUrl: 'app/dashboard/dashboard.view.html',
+						templateUrl: 'src/dashboard/dashboard.view.html',
 						controller: 'DashboardController'
 					}
 				)
 				.when (
 					'/login', {
-						templateUrl: 'app/login/login.view.html',
+						templateUrl: 'src/login/login.view.html',
 						controller: 'LoginController'
 					}
 				)
@@ -23,37 +23,37 @@ app.config (
 				)
 				.when (
 					'/register', {
-						templateUrl: 'app/registration/registration.view.html',
+						templateUrl: 'src/registration/registration.view.html',
 						controller: 'RegistrationController'
 					}
 				) 
 				.when (
 					'/blog', {
-						templateUrl: 'app/blog/blog.view.html',
+						templateUrl: 'src/blog/blog.view.html',
 						controller: 'BlogController'
 					}
 				)
 				.when (
 					'/public', {
-						templateUrl: 'app/blog/search/search.view.html',
+						templateUrl: 'src/blog/search/search.view.html',
 						controller: 'BlogSearchController'
 					}
 				)
 				.when (
 					'/profile', {
-						templateUrl: 'app/user-profile/user-profile.view.html',
+						templateUrl: 'src/user-profile/user-profile.view.html',
 						controller: 'UserProfileController'
 					}
 				)
 				.when (
 					'/about', {
-						templateUrl: 'app/about/about.view.html',
+						templateUrl: 'src/about/about.view.html',
 						controller: 'AboutController'
 					}
 				)
 				.when (
 					'/preferences', {
-						templateUrl: 'app/preferences/preferences.view.html',
+						templateUrl: 'src/preferences/preferences.view.html',
 						controller: 'PreferencesController'
 					}
 				)

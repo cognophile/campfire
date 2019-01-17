@@ -1,6 +1,6 @@
 app.directive('createPost', [
-  '$localStorage', '$window', 'BlogPostFactoryService', 'AuthService', 'Flash', 'BlogService',
-  function($localStorage, $window, blogPostFactoryService, authService, Flash, blogService) {
+  '$localStorage', '$window', 'PostFactoryService', 'AuthService', 'Flash', 'BlogService',
+  function($localStorage, $window, postFactoryService, authService, Flash, blogService) {
     var directive = {}; 
 
     directive.templateUrl = 'app/blog/posts/create/create.view.html';
@@ -69,7 +69,7 @@ app.directive('createPost', [
           return;
         }
 
-        var post = blogPostFactoryService.Create(
+        var post = postFactoryService.Create(
           newId, 
           $scope.user.username, 
           $scope.form.title, 

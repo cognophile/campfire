@@ -1,20 +1,20 @@
-@import url('./navigation/navigation.styles.css');
-@import url('./login/login.styles.css');
-@import url('./registration/registration.styles.css');
-@import url('./about/about.styles.css');
-@import url('./dashboard/dashboard.styles.css');
-@import url('./user-profile/user-profile.styles.css');
-@import url('./preferences/preferences.styles.css');
+@import url('./src/navigation/navigation.styles.css');
+@import url('./src/login/login.styles.css');
+@import url('./src/registration/registration.styles.css');
+@import url('./src/about/about.styles.css');
+@import url('./src/dashboard/dashboard.styles.css');
+@import url('./src/user-profile/user-profile.styles.css');
+@import url('./src/preferences/preferences.styles.css');
 
-@import url('./blog/blog.styles.css');
-@import url('./blog/posts/create/create.styles.css');
-@import url('./blog/posts/edit/edit.styles.css');
-@import url('./blog/posts/view/view.styles.css');
-@import url('./blog/search/search.styles.css');
-@import url('./blog/comments/comments.styles.css');
-@import url('./blog/tags/tags.styles.css');
+@import url('./src/blog/blog.styles.css');
+@import url('./src/blog/posts/create/create.styles.css');
+@import url('./src/blog/posts/edit/edit.styles.css');
+@import url('./src/blog/posts/view/view.styles.css');
+@import url('./src/blog/search/search.styles.css');
+@import url('./src/blog/comments/comments.styles.css');
+@import url('./src/blog/tags/tags.styles.css');
 
-@import url('./plugins/ngFlash/angular-flash.css');
+@import url('../plugins/ngFlash/angular-flash.css');
 
 :root {
     --primary-theme-color: #4A1087;

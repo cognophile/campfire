@@ -1,6 +1,6 @@
 app.service('BlogService', [
-        '$rootScope', '$localStorage', 'BlogPostFactoryService',
-        function($rootScope, $localStorage, blogPostFactoryService) {
+        '$rootScope', '$localStorage', 'PostFactoryService',
+        function($rootScope, $localStorage, postFactoryService) {
             
             // Private Properties 
             var self = this;
@@ -22,7 +22,7 @@ app.service('BlogService', [
                 if ($localStorage.blog) {
                     self.posts = $localStorage.blog.posts;
                 } else {
-                    $localStorage.blog = blogPostFactoryService.GetInitialPosts();
+                    $localStorage.blog = postFactoryService.GetInitialPosts();
                     self.posts = $localStorage.blog.posts;
                 }
             }

@@ -1,5 +1,5 @@
 app.directive('postComments', [
-  '$localStorage', 'AuthService', 'PostCommentFactoryService', 'Flash', 'BlogService',
+  '$localStorage', 'AuthService', 'CommentFactoryService', 'Flash', 'BlogService',
   function($localStorage, authService, commentFactoryService, Flash, blogService) {
     var directive = {}; 
 
